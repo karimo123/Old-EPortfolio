@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*{
+    font-family: 'Lato', sans-serif;
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+li{
+    list-style: none;
+    /*float:left;*/
+}
+h1, h2, h3, h4, h5, h6, span{
+    color: #242424;
+    text-align: center;
+    line-height: 1.25;
+}
+
+
+p{
+    line-height: 1.5;
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+    position: relative;
+}
+
+/* Nav Bar */
+nav{
+    width:100%;
+    height:100px;
+    max-width:1000px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 12px;
+}
+
+/*Makes list side by side */
+.nav__Link--List{
+    display: flex; 
+}
+
+/* Formats the top right Nav */
+.nav__Link--Anchor{
+    margin:0 12px;
+    color:#242424;
+    font-weight: 700;
+    transition: all 500ms ease;
+}
+
+/* Hovering over Languages and Projects */
+.link__Hover--Effect:after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: black;
+    width: 0;
+    bottom:-3px;
+    right:0;
+    transition: all 300ms ease;
+}
+.link__Hover--Effect:hover:after{
+    width:100%;
+    left:0;
+}
+.link__Hover--Effect:hover{
+    color:rgb(59, 128, 207);
+}
+
+/* For footer links */
+.link__Hover--Effect--white:after{
+    background-color: white;
+}
+
+/* Contact Button */
+.contact{
+    background-color: #1747ca;
+    padding:8px 20px;
+    border-radius: 50px;
+    color:whitesmoke;
+    transition: all 300ms ease;
+}
+
+/* Hovering over Contact */
+.contact:hover{
+    background-color: rgb(59, 128, 207);
+    
+}
+
+/* Logo Format */
+.karimLogo{
+    color:white;
+    background-color: #1747ca;
+    padding:8px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    margin: 0 12px;
+    font-weight: bold;
+    
+}
+
+.flex{
+    display: flex;
+}
+.flex-1{
+    flex:1;
+}
+
+/* Centers */
+.row{
+    width:100%;
+    max-width: 800px;
+    margin:0 auto;
+    padding: 0 12px;
+}
+
+/* Every even section has background colour gray */
+section:nth-child(even)
+{
+    background-color: #f8f8f8;
+}
+
+.section--title{
+    margin-bottom: 20px;
+}
+
+
+
+/* About Me */
+#aboutMe{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+.aboutMe--info{
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* The box the about me info is in */
+.aboutMe--infoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+/* The box the about me Pic is in */
+.aboutMe--Pic--Figure{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    overflow: auto;
+    margin-bottom: 28px;
+
+    /* name, time, delay, opposite */
+    animation: animate--profile--pic 800ms 200ms backwards;
+
+    /* box-shadow: left/right(px) up/down(px) howseethruitis(px)  */
+    box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.5);
+}
+/* to animate profile pic upon refresh */
+@keyframes animate--profile--pic{
+    0%{
+        transform: scale(0);
+    }
+    80%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+/*The Picture */
+.aboutMe--Pic{
+    width: 100%;
+
+    /* Zooming in */
+    transform: scale(3.7);
+
+    /* Padding to move the pic after zooming in left or right */
+    padding-right:4.5px;
+     
+}
+
+/* header1 */
+.aboutMe-Title{
+    font-size: 30px;
+    margin-bottom: 14px;
+    animation: fade-up 650ms 400ms backwards;
+}
+
+/* AboutMe Paragraph */
+.aboutMe-Para{
+    font-size: 20px;
+    margin-bottom: 40px;
+    animation: fade-up 650ms 600ms backwards;
+}
+
+/* aboutMe Important Links */
+.aboutMe--link{
+    font-size:30px;
+    color: #1747ca;
+    padding: 0 30px; 
+    transition: all 400ms ease;
+}
+
+/* Hover Transition of aboutMe Links */
+.aboutMe--link:hover{
+    color:  rgb(112, 169, 235);
+    font-size: 33px;
+}
+
+.aboutMe--Links{
+    animation: fade-up 650ms 600ms backwards;
+}
+
+
+/* Headers of aboutMe Links */
+.aboutMe--links--headers{
+    margin-right:95px;
+    color:#242424;
+    font-weight: 700;
+    font-size: 12px;
+    animation: fade-up 650ms 600ms backwards;
+}
+/* animation for fading up */
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.aboutMe--imgContainer{
+   flex:1;
+   display: flex;
+   align-items: center;
+   width: 350px;
+   margin-left: auto;
+   margin-right: auto;
+    
+}
+.aboutMe--img{
+    width: 100%;
+    animation: fade-in 1000ms 800ms backwards;
+}
+
+/* fade-in for the image */
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+/* Progamming Languages Section */
+
+.languages--container{
+    padding:50px 0;
+}
+/*All the languages */
+.language--list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* language div */
+.language{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* transition: makes the name of language scale up to scale and fades it into the opcacity*/
+.language:hover .language--name{
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* language name in text underneath pic */
+.language--name{
+    position: absolute;
+    bottom:0;
+    font-size: 12px;
+    transform: scale(0); /* scale = 0 to make text hidden until hovered over image */ 
+    transition: all 400ms ease;
+    opacity: 0; 
+}
+
+/* container for lang img */
+.language--img--figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:25px 16px;
+}
+
+.language--image{
+    width: 100%;
+    max-width: 100px;
+    transition: all 400ms ease;
+    height: auto;
+}
+
+/* transition: makes img zoom in and decrease brightness */
+.language:hover .language--image{
+    filter: brightness(80%);
+    opacity: 0.86;
+    transform: scale(0.9);
+}
+
+/* PROJECTS */
+.project--item{
+    margin-bottom: 135px;
+    width:75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project--item:last-child{
+    margin-bottom: 40px;
+}
+.project--img{
+    width:100%;
+    transition: all 500ms ease;
+}
+
+.project--wrapper{
+    display: flex;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px  20px 80px rgba(0, 0, 0, 0.45);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    
+}
+.project--wrapper:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width: 100%;
+    background-color:#1c1d25;
+    opacity: 0;
+    transition: opacity 450ms ease;
+    z-index:2;
+}
+
+.project--item:hover .project--wrapper:before{
+    opacity: 0.7;
+}
+
+.project--item:hover .project--img{
+    transform: scale(1.07);
+    filter: blur(5px);
+}
+.project--item:hover .project--description{
+    opacity: 1;
+    transform: translateY(-50%);
+
+}
+
+.project--list{
+    padding-top: 40px;
+}
+
+.project--description{
+    position: absolute;
+    top:50%;
+    left:50px;
+    transform: translateY(100%);
+    max-width: 550px;
+    z-index: 3;
+    opacity: 0;
+    transition: transform 450ms ease, opacity 300ms ease;
+}
+
+.project--description--title{
+    font-size: 30px;
+}
+.project--description--para{
+    margin: 16px 0;
+}
+.project--description--link{
+    font-size: 20px;
+    margin-right: 16px;
+}
+.project--description--title, 
+.project--description--subTitle, 
+.project--description--para,
+.project--description--link{
+    text-align: left;
+    color: #fff;
+    
+}
+.github--link{
+    color: white;
+    transition: all 300ms ease;
+}
+.github--link:hover{
+    color:#1747ca;
+    font-size: larger;
+}
+
+footer {
+    background-color: #242424;
+}
+.footer--socialList{
+    width:100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer--row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:8% 0;
+}
+.footer--logo--img{
+    width:70px;
+    height:70px;
+    border-radius: 50px;
+}
+
+.footer--logo{
+    margin-bottom: 28px;
+}
+
+.footer--socialLink,
+.footer--copyright{
+    color: #fff;
+}
+
+.footer--logo--top{
+    color: #fff;
+    position: absolute;
+    right:0px;
+    top:20px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 300ms ease;
+
+}
+
+.footer--link{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer--link:hover .footer--logo--top{
+    transform: translate(60px);
+    opacity: 1;
+}
+/* for med - big phones */
+@media (max-width:768px){
+    nav{
+        height:68px;
+    }
+
+    h1,h2{
+        font-size: 24px;
+    }
+
+    .aboutMe-Para{
+        font-size:18px;
+    }
+
+    .language{
+        width: calc(100%/2);
+    }
+
+    .project--description--para{
+        font-size: 14px;
+    }
+    .project--description{
+        left:30px;
+        padding-right: 30px;
+    }
+
+}
+
+@media (max-width:480px){
+    .project--item{
+        margin-bottom: 75px;
+    }
+    .project--description--title{
+        font-size: 16px;
+        text-align: center;
+    }
+    .project--description--subTitle{
+        font-size: 8px;
+        text-align: center;
+    }
+    .project--description{
+        padding: 4px;
+        left: 0;
+        width: 100%;
+    }
+
+    .navLinkDisappear:not(:last-child){
+        display: none;
+    }
+    .project--description--para{
+        font-size: 6px;
+        text-align: center;
+    }
+    .project--description--link{
+        display:flex;
+        justify-content: center;  
+        margin:12px 0 ;
+    }
+}
+@media (max-width:400px){
+    pre{
+        display: none;
+    }
+    .aboutMe--imgContainer{
+        max-width: 300px;
+    }
+}
+
+
+
