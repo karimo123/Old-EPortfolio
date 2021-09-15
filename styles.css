@@ -161,7 +161,7 @@ section:nth-child(even)
     width:100px;
     height:100px;
     border-radius: 50%;
-    overflow: auto;
+    overflow: hidden;
     margin-bottom: 28px;
 
     /* name, time, delay, opposite */
